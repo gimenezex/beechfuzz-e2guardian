@@ -13,7 +13,7 @@ services:
     expose:
     - 8080
     - 80
-    
+  # Replace your own volume directory  
     volumes:
       - /home/darwin/dockersquid/e2guardian/conf:/config
       - /home/darwin/dockersquid/e2guardian/log:/app/log
