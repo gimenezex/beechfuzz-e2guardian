@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  e2guardian:
+    image: beechfuzz/e2guardian
+    restart: unless-stopped
+    environment:
+      - FILEBROWSER=on
+      - NWEB=on      
+    ports:
+      - 8080:8080
+      - 80:80
+      - 81:81
+    expose:
+    - 8080
+    - 80
+    
+    volumes:
+      - /home/darwin/dockersquid/e2guardian/conf:/config
+      - /home/darwin/dockersquid/e2guardian/log:/app/log
+
+
+  
