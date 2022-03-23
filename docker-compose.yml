@@ -10,13 +10,17 @@ services:
       - 8080:8080
       - 80:80
       - 81:81
+     
     expose:
     - 8080
     - 80
+    
+    dns:
+      - "172.16.188.26"
+      
+    network_mode: "bridge"
   # Replace your own volume directory  
     volumes:
       - /home/darwin/dockersquid/e2guardian/conf:/config
       - /home/darwin/dockersquid/e2guardian/log:/app/log
-
-
   
